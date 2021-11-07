@@ -8,7 +8,7 @@ const renderRestaurantCards = (data) => {
     a.classList.add("card");
     a.classList.add("card-restaurant");
     a.dataset.products = products;
-    a.setAttribute("href", "/restaurant.html");
+    a.setAttribute("href", "restaurant.html");
     a.innerHTML = `
       <img class="card-image" src="${image}" alt="${name}" />
       <div class="card-text">
@@ -33,7 +33,7 @@ const renderRestaurantCards = (data) => {
         buttonAuth.dispatchEvent(event);
       } else {
         localStorage.setItem("restaurant", JSON.stringify(item));
-        window.location.href = "/restaurant.html";
+        window.location.href = "restaurant.html";
       };
     });
 
