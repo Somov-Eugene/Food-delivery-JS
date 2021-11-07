@@ -33,7 +33,7 @@ const renderRestaurantCards = (data) => {
         buttonAuth.dispatchEvent(event);
       } else {
         localStorage.setItem("restaurant", JSON.stringify(item));
-        window.location.href = "/restaurant.html";
+        window.location.href = "restaurant.html";
       };
     });
 
