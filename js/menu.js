@@ -50,9 +50,9 @@ const restaurant = JSON.parse(localStorage.getItem("restaurant"));
 const URL = `https://test-db0fe-default-rtdb.firebaseio.com/db/${restaurant.products}`;
 
 fetch(URL)
-.then((res) => res.json())
-.then((data) => {
-  renderTitle(restaurant);
-  renderMenuCards(data);
+  .then((res) => res.json())
+  .then((data) => {
+    renderTitle(restaurant);
+    renderMenuCards(data);
   })
   .catch((error) => redirectHome());
