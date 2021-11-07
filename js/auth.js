@@ -9,11 +9,11 @@ const inputPassword = document.getElementById("password");
 const buttonOut = document.querySelector(".button-out");
 const userName = document.querySelector(".user-name");
 
-const login = (user) => {
+const login = ({login}) => {
   buttonAuth.style.display = "none";
   buttonOut.style.display = "flex";
 
-  userName.textContent = user.login;
+  userName.textContent = login;
   userName.style.display = "block";
 
   modalAuth.style.display = "none";
@@ -21,6 +21,7 @@ const login = (user) => {
 
 const logout = () => {
   localStorage.removeItem("user");
+  localStorage.removeItem("restaurant");
 
   userName.style.display = "none";
   userName.textContent = "";
@@ -45,7 +46,7 @@ logInForm.addEventListener("submit", (e) => {
     password: inputPassword.value,
   };
 
-  localStorage.setItem("user", JSON.stringify({login: user.login}));
+  localStorage.setItem("user", JSON.stringify(user));
   login(user);
 });
 
