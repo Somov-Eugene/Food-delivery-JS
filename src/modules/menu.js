@@ -1,4 +1,7 @@
 const menu = () => {
+  const cardsMenu = document.querySelector(".cards-menu");
+  const cartArray = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
+
   const renderTitle = ({ name, stars, price, kitchen }) => {
     const sectionHeading = document.querySelector(".section-heading");
     const restaurantTitle = sectionHeading.querySelector(".restaurant-title");
@@ -12,13 +15,27 @@ const menu = () => {
     divCategory.textContent = kitchen;
   };
 
-  const renderMenuCards = (data) => {
-    const cardsMenu = document.querySelector(".cards-menu");
+  // console.log("уже есть");
+  const addToCart = (cartItem) => {
+    if (cartArray.some((item) => item.id === cartItem.id)) {
+      cartArray.map((item) => {
+        if (item.id === cartItem.id) {
+          item.quantity++;
+        }
+        return item;
+      });
+    } else {
+      cartArray.push(cartItem);
+    }
 
-    data.forEach(({ description, image, name, price }) => {
-      const div = document.createElement("div");
-      div.classList.add("card");
-      div.innerHTML = `
+    localStorage.setItem("cart", JSON.stringify(cartArray));
+  };
+
+  const renderMenuCards = (data) => {
+    data.forEach(({ id, description, image, name, price }) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.innerHTML = `
         <img class="card-image" src="${image}" alt="${name}" />
         <div class="card-text">
           <div class="card-heading">
@@ -36,7 +53,12 @@ const menu = () => {
           </div>
         </div>
       `;
-      cardsMenu.append(div);
+
+      card.querySelector(".button-add-cart").addEventListener("click", () => {
+        addToCart({ id, name, price, quantity: 1 });
+      });
+
+      cardsMenu.append(card);
     });
   };
 

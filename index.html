@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic&display=swap" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/style.css" />
   <script src="./dist/main.js" defer></script>
@@ -45,27 +45,27 @@
 
   <main class="main">
     <div class="container">
-      <section class="container-promo swiper">
+      <section class="swiper container-promo">
         <div class="swiper-wrapper">
-          <section class="promo pizza swiper-slide">
+          <section class="swiper-slide promo pizza">
             <h1 class="promo-title">Онлайн-сервис <br />доставки еды на&nbsp;дом</h1>
             <p class="promo-text">
               Блюда из&nbsp;любимого ресторана привезет курьер в&nbsp;перчатках, маске и&nbsp;с&nbsp;антисептиком
             </p>
           </section>
-          <section class="promo kebab swiper-slide">
+          <section class="swiper-slide promo kebab">
             <h1 class="promo-title">Шашлыки на&nbsp;майские <br />со&nbsp;скидкой&nbsp;35%</h1>
             <p class="promo-text">
               Закажите шашлыки в&nbsp;любом ресторане до&nbsp;10&nbsp;мая и&nbsp;получите скидку по&nbsp;промокоду OMAGAD
             </p>
           </section>
-          <section class="promo vegetables swiper-slide">
+          <section class="swiper-slide promo vegetables">
             <h1 class="promo-title">Скидка&nbsp;20% на&nbsp;всю еду <br />по&nbsp;промокоду LOVE.JS</h1>
             <p class="promo-text">
               Блюдо из&nbsp;ресторана привезут вместе с&nbsp;двумя подарочными книгами по&nbsp;фронтенду
             </p>
           </section>
-          <section class="promo sushi swiper-slide">
+          <section class="swiper-slide promo sushi">
             <h1 class="promo-title">Сеты со&nbsp;скидкой до&nbsp;30% <br />в&nbsp;ресторанах</h1>
             <p class="promo-text">
               Скидки на&nbsp;сеты до&nbsp;30&nbsp;мая по&nbsp;промокоду DADADA
@@ -122,52 +122,12 @@
       </div>
       <!-- /.modal-header -->
       <div class="modal-body">
-        <div class="food-row">
-          <span class="food-name">Ролл угорь стандарт</span>
-          <strong class="food-price">250 ₽</strong>
-          <div class="food-counter">
-            <button class="counter-button">-</button>
-            <span class="counter">1</span>
-            <button class="counter-button">+</button>
-          </div>
-        </div>
-        <!-- /.foods-row -->
-        <div class="food-row">
-          <span class="food-name">Ролл угорь стандарт</span>
-          <strong class="food-price">250 ₽</strong>
-          <div class="food-counter">
-            <button class="counter-button">-</button>
-            <span class="counter">1</span>
-            <button class="counter-button">+</button>
-          </div>
-        </div>
-        <!-- /.foods-row -->
-        <div class="food-row">
-          <span class="food-name">Ролл угорь стандарт</span>
-          <strong class="food-price">250 ₽</strong>
-          <div class="food-counter">
-            <button class="counter-button">-</button>
-            <span class="counter">1</span>
-            <button class="counter-button">+</button>
-          </div>
-        </div>
-        <!-- /.foods-row -->
-        <div class="food-row">
-          <span class="food-name">Ролл угорь стандарт</span>
-          <strong class="food-price">250 ₽</strong>
-          <div class="food-counter">
-            <button class="counter-button">-</button>
-            <span class="counter">1</span>
-            <button class="counter-button">+</button>
-          </div>
-        </div>
-        <!-- /.foods-row -->
       </div>
       <!-- /.modal-body -->
       <div class="modal-footer">
-        <span class="modal-pricetag">1250 ₽</span>
+        <span class="modal-pricetag">0 ₽</span>
         <div class="footer-buttons">
-          <button class="button button-primary">Оформить заказ</button>
+          <button class="button button-primary send-cart">Оформить заказ</button>
           <button class="button clear-cart">Отмена</button>
         </div>
       </div>

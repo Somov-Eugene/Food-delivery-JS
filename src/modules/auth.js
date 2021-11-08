@@ -10,12 +10,16 @@ const auth = () => {
   const buttonOut = document.querySelector(".button-out");
   const userName = document.querySelector(".user-name");
 
+  const buttonCart = document.querySelector(".button-cart");
+
   const login = ({ login }) => {
     buttonAuth.style.display = "none";
     buttonOut.style.display = "flex";
 
     userName.textContent = login;
     userName.style.display = "block";
+
+    buttonCart.style.display = "flex";
 
     modalAuth.style.display = "none";
   };
@@ -26,6 +30,8 @@ const auth = () => {
 
     userName.style.display = "none";
     userName.textContent = "";
+
+    buttonCart.style.display = "none";
 
     buttonOut.style.display = "none";
     buttonAuth.style.display = "flex";
