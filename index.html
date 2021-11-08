@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic&display=swap" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/style.css" />
   <script src="./dist/main.js" defer></script>
@@ -44,31 +45,36 @@
 
   <main class="main">
     <div class="container">
-      <section class="container-promo">
-        <section class="promo pizza">
-          <h1 class="promo-title">Онлайн-сервис <br />доставки еды на дом</h1>
-          <p class="promo-text">
-            Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком
-          </p>
-        </section>
-        <!-- <section class="promo kebab">
-          <h1 class="promo-title">Шашлыки на майские <br> со скидкой 35%</h1>
-          <p class="promo-text">
-            Закажите шашлыки в любом ресторане до 10 мая и получите скидку по промокоду OMAGAD
-          </p>
-        </section>
-        <section class="promo vegetables">
-          <h1 class="promo-title">Скидка 20% на всю еду <br> по промокоду LOVE.JS</h1>
-          <p class="promo-text">
-            Блюдо из ресторана привезут вместе с двумя подарочными книгами по фронтенду
-          </p>
-        </section>
-        <section class="promo sushi">
-          <h1 class="promo-title">Сеты со скидкой до 30% <br> в ресторанах</h1>
-          <p class="promo-text">
-            Скидки на сеты до 30 мая по промокоду DADADA
-          </p>
-        </section> -->
+      <section class="container-promo swiper">
+        <div class="swiper-wrapper">
+          <section class="promo pizza swiper-slide">
+            <h1 class="promo-title">Онлайн-сервис <br />доставки еды на&nbsp;дом</h1>
+            <p class="promo-text">
+              Блюда из&nbsp;любимого ресторана привезет курьер в&nbsp;перчатках, маске и&nbsp;с&nbsp;антисептиком
+            </p>
+          </section>
+          <section class="promo kebab swiper-slide">
+            <h1 class="promo-title">Шашлыки на&nbsp;майские <br />со&nbsp;скидкой&nbsp;35%</h1>
+            <p class="promo-text">
+              Закажите шашлыки в&nbsp;любом ресторане до&nbsp;10&nbsp;мая и&nbsp;получите скидку по&nbsp;промокоду OMAGAD
+            </p>
+          </section>
+          <section class="promo vegetables swiper-slide">
+            <h1 class="promo-title">Скидка&nbsp;20% на&nbsp;всю еду <br />по&nbsp;промокоду LOVE.JS</h1>
+            <p class="promo-text">
+              Блюдо из&nbsp;ресторана привезут вместе с&nbsp;двумя подарочными книгами по&nbsp;фронтенду
+            </p>
+          </section>
+          <section class="promo sushi swiper-slide">
+            <h1 class="promo-title">Сеты со&nbsp;скидкой до&nbsp;30% <br />в&nbsp;ресторанах</h1>
+            <p class="promo-text">
+              Скидки на&nbsp;сеты до&nbsp;30&nbsp;мая по&nbsp;промокоду DADADA
+            </p>
+          </section>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
       </section>
       <section class="restaurants">
         <div class="section-heading">
