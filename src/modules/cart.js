@@ -13,8 +13,6 @@ const cart = () => {
     modalCart.classList.remove("is-open");
     modalBody.innerHTML = "";
     modalPrice.textContent = "0 ₽";
-
-    window.location.reload(); // Clear Cart from memory
   };
 
   const decrementQuantity = (id) => {

@@ -1,6 +1,5 @@
 const menu = () => {
   const cardsMenu = document.querySelector(".cards-menu");
-  const cartArray = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
 
   const renderTitle = ({ name, stars, price, kitchen }) => {
     const sectionHeading = document.querySelector(".section-heading");
@@ -15,8 +14,9 @@ const menu = () => {
     divCategory.textContent = kitchen;
   };
 
-  // console.log("уже есть");
   const addToCart = (cartItem) => {
+    const cartArray = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
+
     if (cartArray.some((item) => item.id === cartItem.id)) {
       cartArray.map((item) => {
         if (item.id === cartItem.id) {
@@ -54,9 +54,8 @@ const menu = () => {
         </div>
       `;
 
-      card.querySelector(".button-add-cart").addEventListener("click", () => {
-        addToCart({ id, name, price, quantity: 1 });
-      });
+      const buttonAddCart = card.querySelector(".button-add-cart");
+      buttonAddCart.addEventListener("click", () => addToCart({ id, name, price, quantity: 1 }));
 
       cardsMenu.append(card);
     });
@@ -64,8 +63,7 @@ const menu = () => {
 
   const redirectHome = () => (window.location.href = "/");
 
-  if (!localStorage.getItem("restaurant")) {
-    // No data
+  if (!localStorage.getItem("restaurant")) { // No data
     redirectHome();
   }
 
